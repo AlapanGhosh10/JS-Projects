@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+}
+#mycanvas {
+    background-image: url("https://img.itch.zone/aW1hZ2UvMTIxNjU4LzU2MDM4MS5wbmc=/315x250%23c/yrkGs9.png");
+    /* background-position: 50px; */
+}
+#man {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    /* transform: scaleX(-1); */
+}
