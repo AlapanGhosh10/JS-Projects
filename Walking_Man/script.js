@@ -11,7 +11,7 @@ function init() {
     }
 
     img = document.getElementById("man");
-    pen.drawImage(img, man.x, 120, 150, 150);
+    pen.drawImage(img, man.x, man.y, 150, 150);
 }
 
 // function update() {
@@ -27,7 +27,7 @@ function bgShift(mv) {
     canvas.style = `background-position: ${pos}px;`
 }
 
-function move(e) {
+function move(e) {    
     if(e.key == 'd') {
         bgShift(-2)
         pen.clearRect(0, 0, 1000, 250)
@@ -39,6 +39,14 @@ function move(e) {
         pen.clearRect(0, 0, 1000, 250)
         man.x -= 5;
         pen.drawImage(img, man.x, 120, 150, 150);
+    }
+    if(e.key == 'w') {
+        pen.clearRect(0, 0, 1000, 250)
+        pen.drawImage(img, man.x, 80, 150, 150);
+        setTimeout(() => {
+            pen.clearRect(0, 0, 1000, 250)
+            pen.drawImage(img, man.x, 120, 150, 150)
+        },80)
     }
     if(man.x > 900)
         man.x = -60
