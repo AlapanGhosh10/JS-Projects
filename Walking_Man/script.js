@@ -14,13 +14,9 @@ function init() {
     pen.drawImage(img, man.x, man.y, 150, 150);
 }
 
-// function update() {
+// function update() {}
 
-// }
-
-// function draw() {
-
-// }
+// function draw() {}
 
 function bgShift(mv) {
     pos += mv
